@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CineStream - Watch & Download Movies</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+<!-- Header -->
+<header class="header">
+<div class="container">
+<div class="nav-wrapper">
+<h1 class="logo"><i class="fas fa-film"></i> CineStream</h1>
+<div class="search-wrapper">
+<input type="text" id="search-input" placeholder="Search movies..." class="search-input">
+<i class="fas fa-search search-icon"></i>
+</div>
+</div>
+<nav class="category-nav">
+<button class="filter-btn active" data-filter="all">All</button>
+<button class="filter-btn" data-filter="feature">Movies</button>
+<button class="filter-btn" data-filter="short">Short Films</button>
+<button class="filter-btn" data-filter="animation">Animation</button>
+<button class="filter-btn" data-filter="scifi">Sci-Fi</button>
+</nav>
+</div>
+</header>
+<!-- Hero Banner -->
+<section class="hero">
+<div class="hero-content">
+<h2 class="hero-title">Stream & Download Unlimited Movies</h2>
+<p class="hero-subtitle">Watch thousands of movies and short films in HD quality</p>
+<button class="hero-btn" onclick="document.getElementById('movies
+section').scrollIntoView({behavior:'smooth'})">
+Browse Movies <i class="fas fa-arrow-down"></i>
+</button>
+</div>
+</section>
+<!-- Movies Grid -->
+<section id="movies-section" class="movies-section">
+<div class="container">
+<h2 class="section-title">All Movies</h2>
+<div id="movies-container" class="movies-grid">
+<!-- Movies will be loaded by JavaScript -->
+</div>
+</div>
+</section>
+<!-- Video Player Modal -->
+<div id="player-container" class="player-container">
+<div class="player-wrapper">
+<button class="close-btn" onclick="closeplayer()">&times;</button>
+<h3 id="player-title" class="player-title"></h3>
+<video id="movie-player" controls></video>
+</div>
+</div>
+<!-- Footer -->
+<footer class="footer">
+<div class="container">
+<p>&copy; 2024 CineStream. All rights reserved.</p>
+</div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
+style.css
+/* Reset & Base Styles *
